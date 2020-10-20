@@ -1,7 +1,7 @@
 public class Demo{
   public static void printLoop(int n){
     for(int i = 1; i <= n; i++){
-      for(int j = 0; i > j; j++){
+      for(int j = i - 1; n > j; j++){
         System.out.print(i);
       }
       System.out.println();
@@ -9,6 +9,10 @@ public class Demo{
   }
 
   public static void main(String[] args) {
-    printLoop(5);
+    if (args.length > 0) {
+      printLoop(Integer.parseInt(args[0]));
+    }
+    else
+      printLoop(5);
     }
 }
