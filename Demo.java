@@ -46,7 +46,7 @@ public class Demo{
 
       for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
-          myArray[i][j] = (int)(Math.random()* maxValue);
+          myArray[i][j] = (int)(Math.round(Math.random()* maxValue));
         }
       }
       return myArray;
@@ -56,9 +56,9 @@ public class Demo{
       int[][]myArray = new int[rows][];
 
       for (int i = 0; i < rows; i++) {
-        myArray[i] = new int[(int)(Math.random()* cols)];
+        myArray[i] = new int[(int)(Math.round(Math.random()* cols))];
         for (int j = 0; j < myArray[i].length; j++) {
-          myArray[i][j] = (int)(Math.random()* maxValue);
+          myArray[i][j] = (int)(Math.round(Math.random()* maxValue));
         }
       }
       return myArray;
